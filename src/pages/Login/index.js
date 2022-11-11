@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate   } from 'react-router-dom'
+import Button from "../../components/atoms/Button";
 
 const Login = () => {
 
@@ -13,7 +14,7 @@ const Login = () => {
   return (
     <React.Fragment>
       <h1>Compass Login</h1>
-      <button onClick={HandleLogin}> login</button>
+      <Button onClick={HandleLogin}> login</Button>
     </React.Fragment>
   )
 }

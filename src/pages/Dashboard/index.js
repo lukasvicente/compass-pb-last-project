@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate   } from 'react-router-dom'
+import Button from "../../components/atoms/Button";
 
 const Dashboard = () => {
 
@@ -13,7 +14,7 @@ const Dashboard = () => {
   return ( 
     <React.Fragment>
       <h1>Dashboard</h1>
-      <button onClick={HandleLogout}> Logout </button>
+      <Button onClick={HandleLogout}> Logout </Button>
     </React.Fragment>
   )
 }
