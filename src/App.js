@@ -1,13 +1,16 @@
- import Router from './routes'
- import {  BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import Router from './router';
+import ListBookingProvider from './components/Context/ListBooking';
+import SelectWeekDayProvider from './components/Context/SelectWeekDay';
 
-function App() {
-  return (
-    <BrowserRouter>
+const App = () => {
+  return(
+  <ListBookingProvider>
+    <SelectWeekDayProvider>
       <Router />
-    </BrowserRouter>
-    
-  );
-}
+    </SelectWeekDayProvider>
+  </ListBookingProvider>
+  )
+};
 
 export default App;
