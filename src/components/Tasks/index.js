@@ -39,7 +39,7 @@ export const Tasks = (props) => {
         {allTasks &&
     filterList.map((value, index) => (
             <s.TimeRow key={index}>
-              <s.Time color={(value[1].length == 1 ? color : 'rgba(0, 0, 0, 0.7);')}>
+              <s.Time color={(value[1].length === 1 ? color : 'rgba(0, 0, 0, 0.7);')}>
                 <s.Title> {value[0]}</s.Title>
               </s.Time>
                <s.TaskContainer>
@@ -48,9 +48,12 @@ export const Tasks = (props) => {
                  }
                  {
                    value[1].map(({description, id}, index) => (
-                     <>
-                       <Card id={id} description={description} color={(value[1].length == 1 ? color : 'rgba(0, 0, 0, 0.7);')} />
-                     </>
+                       <Card
+                         key={index}
+                         id={id} 
+                         description={description} 
+                         color={(value[1].length === 1 ? color : 'rgba(0, 0, 0, 0.7);')} 
+                       />
                    ))
                  }
                </s.TaskContainer>
